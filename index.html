@@ -12,10 +12,8 @@
 <tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.3.12" ifid="B7539D5E-C2B7-42E6-852D-67F195C40225" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar
 {
 display: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="INTRO" tags="" position="63,45" size="100,100">=|=
-(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)(set: $liv to 3)(set: $kodedisplay to &#39;&#39;)(set: $svar to &quot;&quot;)(set: $fejlsvar to 0)(set: $klar to 0)&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-(set: $i to 3)(live: 1s)[(if: $klar is 1)[(live: 100ms)[(if: $i&gt;0)[(set: $i to $i-1)(set: $livdisplay to $livdisplay+&#39;&lt;img src=&quot;liv.gif&quot;&gt; &#39;)$livdisplay](else:)[$livdisplay(stop:)(set: $klar to 2)]]](if: $klar is 2)[$livdisplay(stop:)]]$livdisplay
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="INTRO" tags="" position="63,42" size="100,100">=|=
+(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)(set: $liv to 3)(set: $kodedisplay to &#39;&#39;)(set: $svar to &quot;&quot;)(set: $fejlsvar to 0)(set: $klar to 0)&lt;img src=&quot;space.png&quot;&gt;(set: $i to 3)(live: 1s)[(if: $klar is 1)[(live: 100ms)[(if: $i&gt;0)[(set: $i to $i-1)(set: $livdisplay to $livdisplay+&#39;&lt;img src=&quot;liv.gif&quot;&gt; &#39;)$livdisplay](else:)[$livdisplay(stop:)(set: $klar to 2)]]](if: $klar is 2)[$livdisplay(stop:)]]$livdisplay
 =|=
 (set: $besvarelse to &#39;&#39;)(set: $n to 9)(live: 1s)[(if: $klar is 2)[(live: 100ms)[(if: $n&gt;0)[(set: $n to $n-1)(set: $kodedisplay to $kodedisplay+&#39;&lt;img src=&quot;blank.png&quot;&gt;&#39;)$kodedisplay](else:)[$kodedisplay(stop:)(set: $klar to 3)]]](if: $klar is 3)[$kodedisplay(stop:)]]$kodedisplay
 |==|
@@ -33,12 +31,10 @@ Konkurrencen er en del af Vejle Bibliotekernes (link: &quot;online booktalks&quo
 Jeg er klar!(click: &quot;Jeg er klar&quot;)[(set: $klar to 1)
 
 0. Når du svarer rigtigt får du en del af koden som du kan se oppe til højre.
-0. Når du svarer forkert mister du et liv, som du kan se oppe i midten.
+0. Når du svarer forkert mister du et liv. Mister du alle skal du starte forfra.
 [[OK!-&gt;Star Girl]]
 ]</tw-passagedata><tw-passagedata pid="2" name="Star Girl" tags="" position="260,40" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -62,12 +58,10 @@ Find ebogen //(text-colour:yellow)[Star Girl – koncert eller kirsebær]// af f
 
 (text-style:&quot;fade-in-out&quot;)[(text-colour:red)[&#39;&#39;?&#39;&#39;]] Hvad tænker Star Girl på under koncerten i begyndelsen af bogen?
 (text-indent: 50)[(link: &quot;Kæresten&quot;)[(set: $svar to &quot;kæresten&quot;)(goto: &quot;Star Girl svar&quot;)]]
-(text-indent: 50)[(link: &quot;Luna – hendes veninde&quot;)[(set: $svar to &quot;Luna&quot;)(goto: &quot;Star Girl svar&quot;)]]
+(text-indent: 50)[(link: &quot;Veninden Luna&quot;)[(set: $svar to &quot;Luna&quot;)(goto: &quot;Star Girl svar&quot;)]]
 (text-indent: 50)[(link: &quot;Lektier&quot;)[(set: $svar to &quot;lektier&quot;)(goto: &quot;Star Girl svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="3" name="Star Girl svar" tags="" position="458,39" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -85,9 +79,7 @@ Nej, det var ikke $svar!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Star Girl]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="4" name="afslutning" tags="" position="746,44" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -100,9 +92,7 @@ Din besvarelse: &#39;&#39;$besvarelse&#39;&#39; er rigtig!
 ](else:)[Prøv lige at kigge på former og bogstaver igen. Ordet du skal finde er ikke &#39;&#39;$besvarelse&#39;&#39;!
 
 [[&lt;- Ret besvarelse-&gt;afkodning]]]</tw-passagedata><tw-passagedata pid="5" name="afkodning" tags="" position="589,39" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -116,9 +106,7 @@ Skriv din besvarelse her
 (input-box:2bind $besvarelse,&quot;=XX=&quot;,1)
 
 [[Se din besvarelse!-&gt;afslutning]]</tw-passagedata><tw-passagedata pid="6" name="Mira" tags="" position="258,144" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -145,9 +133,7 @@ Find Miras pakkeliste i starten af ebogen //(text-colour:yellow)[Mira på lejrsk
 (text-indent: 50)[(link: &quot;Nej&quot;)[(set: $svar to &quot;nej&quot;)(goto: &quot;Mira svar&quot;)]]
 (text-indent: 50)[(link: &quot;Det må man selv bestemme&quot;)[(set: $svar to &quot;Det må man selv bestemme&quot;)(goto: &quot;Mira svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="7" name="Mira svar" tags="" position="459,144" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -165,9 +151,7 @@ Nejda!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Mira]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="8" name="Medusa" tags="" position="260,246" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -194,9 +178,7 @@ Find kapitlet //Lyn// i ebogen //(text-colour:yellow)[Medusa – Monster]// af N
 (text-indent: 50)[(link: &quot;Krokodiller&quot;)[(set: $svar to &quot;krokodiller&quot;)(goto: &quot;Medusa svar&quot;)]]
 (text-indent: 50)[(link: &quot;Slanger&quot;)[(set: $svar to &quot;slanger&quot;)(goto: &quot;Medusa svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="9" name="Medusa svar" tags="" position="461,256" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -214,9 +196,7 @@ Nej, det var ikke $svar!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Medusa]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="10" name="Journal X" tags="" position="260,349" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -243,9 +223,7 @@ Find og lyt til lydbogen //(text-colour:yellow)[Journal X – afhugget]// af Kit
 (text-indent: 50)[(link: &quot;Det er brændt ned&quot;)[(set: $svar to &quot;brændt ned&quot;)(goto: &quot;Journal X svar&quot;)]]
 (text-indent: 50)[(link: &quot;Det er blevet oversvømmet&quot;)[(set: $svar to &quot;blevet oversvømmet&quot;)(goto: &quot;Journal X svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="11" name="Journal X svar" tags="" position="464,366" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -263,9 +241,7 @@ Nej, det er ikke $svar!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Journal X]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="12" name="A.S.P.E" tags="" position="262,459" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -292,9 +268,7 @@ Find og prøv de første sider af ebogen //(text-colour:yellow)[A.S.P.E – Dæm
 (text-indent: 50)[(link: &quot;Kattetis og sure sokker&quot;)[(set: $svar to &quot;kattetis og sure sokker&quot;)(goto: &quot;A.S.P.E svar&quot;)]]
 (text-indent: 50)[(link: &quot;Rådne æg og gammel ost&quot;)[(set: $svar to &quot;rådne æg og gammel ost&quot;)(goto: &quot;A.S.P.E svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="13" name="A.S.P.E svar" tags="" position="464,486" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -312,9 +286,7 @@ Viktors eliksir lugtede ikke af $svar!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;A.S.P.E]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="14" name="Zombiejæger" tags="" position="264,568" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -341,9 +313,7 @@ Find og prøv ebogen //(text-colour:yellow)[Zombiejæger – Sort blod]// af Nic
 (text-indent: 50)[(link: &quot;Deres forældre&quot;)[(set: $svar to &quot;deres forældre&quot;)(goto: &quot;ZombieSvar&quot;)]]
 (text-indent: 50)[(link: &quot;Deres venner&quot;)[(set: $svar to &quot;Deres venner&quot;)(goto: &quot;ZombieSvar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="15" name="ZombieSvar" tags="" position="461,597" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -360,10 +330,8 @@ $monsterimage
 Nej, de mistede ikke $svar!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Zombiejæger]](stop:)]]]]
 
-(if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="16" name="Sebastian" tags="" position="265,673" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+(if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="16" name="Sebastian" tags="" position="266,673" size="100,100">=|=
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -390,9 +358,7 @@ Find ebogen //(text-colour:yellow)[Sebastians store quiz om dyr 2]// af Sebastia
 (text-indent: 50)[(link: &quot;Mamba&quot;)[(set: $svar to &quot;Mamba&quot;)(goto: &quot;Sebastian svar&quot;)]]
 (text-indent: 50)[(link: &quot;Taipan&quot;)[(set: $svar to &quot;Taipan&quot;)(goto: &quot;Sebastian svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="17" name="Sebastian svar" tags="" position="460,720" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -410,9 +376,7 @@ Nej, en $svar er en slange!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Sebastian]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="18" name="Victor 1" tags="" position="265,776" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -439,9 +403,7 @@ Find of prøv ebogen //(text-colour:yellow)[Victor 1 – på holdet]// af Lars B
 (text-indent: 50)[(link: &quot;En Real Madrid-trøje&quot;)[(set: $svar to &quot;en Real Madrid-trøje&quot;)(goto: &quot;Victor svar&quot;)]]
 (text-indent: 50)[(link: &quot;En Manchester United-trøje&quot;)[(set: $svar to &quot;en Manchester United-trøje&quot;)(goto: &quot;Victor svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="19" name="Victor svar" tags="" position="458,844" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -459,9 +421,7 @@ Nej, drengen havde ikke en $svar på!
 (set: $i to 2)(live: 1s)[(set: $i to $i-1)(if:$i &lt;= 0)[[[prøv igen-&gt;Victor 1]](stop:)]]]]
 
 (if: $liv is 0)[(set: $livdisplay to &#39;&lt;img src=&quot;space.png&quot;&gt;&#39;)](else-if: $liv is 1)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 2)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)](else-if: $liv is 3)[(set: $livdisplay to &#39;&lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt; &lt;img src=&quot;liv.gif&quot;&gt;&#39;)]</tw-passagedata><tw-passagedata pid="20" name="Fanget" tags="" position="265,883" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
@@ -488,9 +448,7 @@ Find og prøv ebogen //(text-colour:yellow)[Fanget i bjørnens kløer og andre v
 (text-indent: 50)[(link: &quot;En kæleflodhest&quot;)[(set: $svar to &quot;en kæleflodhest&quot;)(goto: &quot;Fanget svar&quot;)]]
 (text-indent: 50)[(link: &quot;En haj&quot;)[(set: $svar to &quot;en haj&quot;)(goto: &quot;Fanget svar&quot;)]]
 ]</tw-passagedata><tw-passagedata pid="21" name="Fanget svar" tags="" position="456,959" size="100,100">=|=
-&lt;img src=&quot;space.png&quot;&gt;&#39;&#39;(text-colour:green)[(print: (passage:)&#39;s name)]&#39;&#39;
-=|=
-$livdisplay
+&lt;img src=&quot;space.png&quot;&gt;$livdisplay
 =|=
 $kodedisplay
 |==|
