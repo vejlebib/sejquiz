@@ -66,9 +66,11 @@ Find ebogen //(text-colour:yellow)[Star Girl – koncert eller kirsebær]// af f
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;Luna&quot;)[Ja, det er rigtigt hun tænkte på veninden Luna.
+(if:$svar is &quot;Luna&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
 
-	[[Gå videre-&gt;Mira]]
+Ja, det er rigtigt hun tænkte på veninden Luna.
+
+[[Gå videre-&gt;Mira]]
 
 (set: $kodedisplay to &#39;&lt;img src=&quot;kode1.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&#39;)
 
@@ -142,9 +144,11 @@ Find Miras pakkeliste i starten af ebogen //(text-colour:yellow)[Mira på lejrsk
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;nej&quot;)[Du har ret - kedeligt kedeligt! Ingen slik på lejrskolen!
+(if:$svar is &quot;nej&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
 
-	[[Gå videre-&gt;Medusa]]
+Du har ret - kedeligt kedeligt! Ingen slik på lejrskolen!
+
+[[Gå videre-&gt;Medusa]]
 
 (set: $kodedisplay to &#39;&lt;img src=&quot;kode1.png&quot;&gt;&lt;img src=&quot;kode2.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&lt;img src=&quot;blank.png&quot;&gt;&#39;)
 
@@ -187,7 +191,9 @@ Find kapitlet //Lyn// i ebogen //(text-colour:yellow)[Medusa – Monster]// af N
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;slanger&quot;)[Ja, de blev bidt af $svar.
+(if:$svar is &quot;slanger&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, de blev bidt af $svar.
 
 	[[Gå videre-&gt;Journal X]]
 
@@ -232,7 +238,9 @@ Find og lyt til lydbogen //(text-colour:yellow)[Journal X – afhugget]// af Kit
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;brændt ned&quot;)[Ja, Madsens hus er brændt ned.
+(if:$svar is &quot;brændt ned&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, Madsens hus er brændt ned.
 
 	[[Gå videre-&gt;A.S.P.E]]
 
@@ -277,7 +285,9 @@ Find og prøv de første sider af ebogen //(text-colour:yellow)[A.S.P.E – Dæm
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;gammel prut og våd hund&quot;)[Ja, det var ikke så lækkert med lugten af $svar.
+(if:$svar is &quot;gammel prut og våd hund&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, det var ikke så lækkert med lugten af $svar.
 
 	[[Gå videre-&gt;Zombiejæger]]
 
@@ -322,7 +332,9 @@ Find og prøv ebogen //(text-colour:yellow)[Zombiejæger – Sort blod]// af Nic
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;deres forældre&quot;)[Ja, de har mistet deres forældre.
+(if:$svar is &quot;deres forældre&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, de har mistet deres forældre.
 
 	[[Gå videre-&gt;Sebastian]]
 
@@ -367,7 +379,9 @@ Find ebogen //(text-colour:yellow)[Sebastians store quiz om dyr 2]// af Sebastia
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;Kea&quot;)[Ja, som du måske har fundet ud af, så er en $svar en papegøje.
+(if:$svar is &quot;Kea&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, som du måske har fundet ud af, så er en $svar en papegøje.
 
 	[[Gå videre-&gt;Victor 1]]
 
@@ -412,7 +426,9 @@ Find of prøv ebogen //(text-colour:yellow)[Victor 1 – på holdet]// af Lars B
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;en Barcelona-trøje&quot;)[Ja, drengen havde en $svar på.
+(if:$svar is &quot;en Barcelona-trøje&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, drengen havde en $svar på.
 
 	[[Gå videre-&gt;Fanget]]
 
@@ -457,7 +473,9 @@ Find og prøv ebogen //(text-colour:yellow)[Fanget i bjørnens kløer og andre v
 $kodedisplay
 |==|
 ---
-(if:$svar is &quot;en haj&quot;)[Ja, han blev angrebet af $svar to gange.
+(if:$svar is &quot;en haj&quot;)[(set: $monsterimage to &#39;&lt;img src=&quot;monster-squish.gif?a=&#39;+(str: (random: 0,65536))+(str: (random: 0,65536))+&#39;&quot; width=&quot;800&quot; height=&quot;312&quot;&gt;&#39;)$monsterimage
+
+Ja, han blev angrebet af $svar to gange.
 
 	[[Gå videre-&gt;afkodning]]
 
